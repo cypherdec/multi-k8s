@@ -8,27 +8,19 @@ import Fib from './Fib';
 function App() {
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Finonacci calculator v2
-          </a>
-          <Link to="/">Home</Link>
-          <Link to="/otherpage">Other Page</Link>
-          <p>hey i just edited this. testing deploy to AWS</p>
-        </header>
-        <div>
-          <Route exact path="/" component={Fib} />
-          <Route path="/otherpage" component={OtherPage} />
+        <div className="App">
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <h1 className="App-title">Fib Calculator Kubernertes</h1>
+            <Link to="/">Home</Link>
+            <Link to="/otherpage">Other Page</Link>
+          </header>
+          <div>
+            <Route exact path="/" component={Fib} />
+            <Route path="/otherpage" component={OtherPage} />
+          </div>
         </div>
-      </div>
-    </Router>
+      </Router>
   );
 }
 
